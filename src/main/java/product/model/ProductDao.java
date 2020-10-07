@@ -53,4 +53,22 @@ public class ProductDao {
 		System.out.println("dao update cnt : "+cnt);
 		return cnt;
 	}
+
+
+	public void deleteProduct(int num) {
+		sqlSessionTemplate.delete(namespace+".DeleteProduct", num);
+		
+	}
+
+
+	public void updateStock(Integer pnum, Integer qty) {
+		Product bean = new Product();
+		bean.setNum(pnum);
+		bean.setStock(qty);
+		sqlSessionTemplate.update(namespace+".UpdateStock", bean);
+		
+	}
+
+
+	
 }

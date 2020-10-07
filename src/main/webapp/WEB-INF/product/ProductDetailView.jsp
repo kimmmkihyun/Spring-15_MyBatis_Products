@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@include file="../common.jsp" %>   
+ 
 ProductDetailView.jsp<br>
 <h2>상품 상세 화면</h2>
 <table border="1">
@@ -33,7 +35,9 @@ ProductDetailView.jsp<br>
 			<tr>
 				<td width="150">주문 수량</td>
 				<td width="300">
-					<form action="" method="post">
+				<!-- add.mall 요청 -> cartaddcontroller로 -->
+					<form action="add.mall" method="post">
+						<input type="hidden" name="num" value="${bean.num }">
 						<input type="text" name="orderqty" value="1">
 						<input type="submit" value="주문">
 					</form>				

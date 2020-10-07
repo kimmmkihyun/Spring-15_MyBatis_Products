@@ -6,7 +6,7 @@ main.jsp<br>
 	String viewProduct = request.getContextPath() + "/list.prd";
 
 	String viewOrder = request.getContextPath() + "/order.mall";
-	
+
 %>
 
 <a href="<%=viewProduct%>">상품 목록 보기</a> <br><br><br>

@@ -47,4 +47,12 @@ public class MemberDao {
 		return member;
 	}
 
+	public void updatePoint(String id, int i) {
+		Member mBean = new Member();
+		mBean.setId(id);
+		mBean.setMpoint(i);
+		sqlSessionTemplate.update(namespace+".UpdatePoint", mBean);
+		
+	}
+
 }
