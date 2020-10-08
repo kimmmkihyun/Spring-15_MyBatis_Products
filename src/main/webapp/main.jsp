@@ -13,3 +13,5 @@ main.jsp<br>
 
 <a href="<%=viewOrder%>">나의 주문 내역</a> <br><br><br>
 
+
+session.getAttribute("loginInfo") : <%=session.getAttribute("loginInfo") %>
